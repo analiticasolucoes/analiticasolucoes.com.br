@@ -1,0 +1,23 @@
+# Configurações de IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+/storage/logs/
+
+# Cache
+/storage/framework/cache/*
+/storage/framework/views/*
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Composer
+/vendor/
+
+# Ambiente
+.env
+.env.local
+.env.*.local
