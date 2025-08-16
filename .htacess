@@ -1,0 +1,13 @@
+# Ativar mod_rewrite
+RewriteEngine On
+
+# Definir a raiz do projeto (ajuste se necessário)
+RewriteBase /
+
+# Se o arquivo ou diretório existir fisicamente, não redireciona
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Redirecionar tudo para public_html/index.php
+RewriteRule ^(.*)$ public_html/index.php [QSA,L]
