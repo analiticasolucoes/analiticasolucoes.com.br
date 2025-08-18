@@ -1,9 +1,10 @@
 <?php
+use App\Models\Page;
+
 $solutions = Page::getSolutions();
 $reviews = Page::getReviews();
 $portfolio = Page::getPortfolio();
 ?>
-
 <section class="apresentacao">
     <article class="apresentacao-argument">
         <h1>Sua marca está visível na Internet??</h1>

@@ -141,6 +141,17 @@ class View {
     public function clearData() {
         $this->data = [];
     }
+
+    /**
+     * Função de escape integrada na View
+     */
+    public static function e($value, $doubleEncode = true) {
+        if ($value === null) {
+            return '';
+        }
+        
+        return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8', $doubleEncode);
+    }
 }
 
 // Funções auxiliares globais para views

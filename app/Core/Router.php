@@ -127,9 +127,9 @@ class Router {
         list($controllerName, $methodName) = explode('@', $action);
 
         $controllerClass = $this->defaultControllerNameSpace . $controllerName;
-        dump(class_exists("App\\Controllers\\HomeController"));
+        
         // Verificar se controller existe
-        if (!class_exists("app\\Controllers\\" . $controllerName)) {
+        if (!class_exists($controllerClass)) {
             throw new Exception("Controller {$controllerName} não encontrado");
         }
 

@@ -100,6 +100,3 @@ function writeLog($message, $type = 'info') {
     
     file_put_contents($logDir . 'app.log', $logMessage, FILE_APPEND | LOCK_EX);
 }
-
-// Carregar outras configurações
-require_once CONFIG_PATH . '/mail.php';

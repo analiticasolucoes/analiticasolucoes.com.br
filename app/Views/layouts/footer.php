@@ -1,4 +1,8 @@
-<?php $socialMedia = Page::getSocialMedia(); ?>
+<?php
+use App\Models\Page;
+
+$socialMedia = Page::getSocialMedia();
+?>
 <footer class="rodape">
     <span class="copyright">Copyright © <?= $year ?> | <strong><?= APP_NAME ?>.</strong></span>
     <div class="social-media-icons">

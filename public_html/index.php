@@ -4,6 +4,8 @@
  * Analítica Soluções - Sistema MVC
  */
 
+use App\Core\Router;
+
 // Inicializar sistema de roteamento
 try {
     require_once dirname(__DIR__) .
@@ -19,8 +21,9 @@ try {
 
     // Carregar configurações
     require_once CONFIG_PATH . DIRECTORY_SEPARATOR . 'app.php';
+    require_once CONFIG_PATH . DIRECTORY_SEPARATOR . 'mail.php';
 
-    $router = new App\Core\Router();
+    $router = new Router();
     $router->dispatch();
 } catch (Exception $e) {
     // Log do erro
